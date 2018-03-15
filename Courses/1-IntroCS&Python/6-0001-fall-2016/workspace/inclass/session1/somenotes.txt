@@ -1,0 +1,65 @@
+Computers basically do two things:
+1- perform calculations
+2- remember stuff
+types of knowledge:
+1- declarative (statement of facts)
+2- imperative (recipes and how-to's)
+
+What is a recipe:
+1- a sequence of steps
+2- flow of control
+3- when to stop 
+ 
+basic computer architecture includes (Memory, Input, Output, ALU, Control Unit)
+Memory contains data and the sequence of instructions
+Control unit(one program counter), starts at the first of the sequence, and sends it to the ALU.
+The sequence is not necessarily linear, there might be some control flow there as well.
+ALU might also get some data and interacts with the Control Unit(it does some primitive operations). It might read more steps or data or write back to memory.
+
+Instructions stored could be arithmetic, logic, tests, or moving data that are based on primitive set of instructions.
+Interpreters executes each instruction in order(uses tests to change the flow)
+
+Turings basic primitives needed for writing programs:
+- do nothing
+- move left
+- move right
+- scan
+- read
+- write
+
+, basically means you can compute anything using these primitives.
+A very powerful thing to say:
+*Anything computable in one language is computatble in any other language*
+
+Some aspects of languages:
+- syntax
+- static semantics
+- semantics
+parallel with english
+primitives in english:words
+using these primitives we can construct english phrases and sentences
+"cat dog boy", syntactically not valid
+"cat hugs boy", syntactically valid
+
+Syntactically valid could have statis semantic error, for example "I are hungry" is valid syntactically, but its static semantics is not right (no meaning).
+
+Semantics is the meaning associated with a syntactically correct statement with no static semantic errors.
+In English, there could be many meaning, in programming languages there is only one meaning , but might not be the one the programmer intended.
+
+Everything in python is an object, and they have a type
+There are two types of objects:
+1- scalar:cannot be subdivided (i.e a number)
+2- non-scalar: could be subdivided(i.e a list of numbers)
+
+If you are in an ide or ipython for example if you write 2+3:
+In[1]  :2+3
+Out[1] :5
+but that is basically just interaction within the shell "only", so if a program runs this, there is nothing going to be on the output. Instead if you use print() function, the output will be shown.
+
+Expressions basically <object> <operator> <object> and they will evaluate to a value.
+
+name = value
+- value is stored on computer memory
+- an assignment binds name to value
+
+So if we rebind the variable name to another value, the old value might still be in the memory but the handle for it is lost.

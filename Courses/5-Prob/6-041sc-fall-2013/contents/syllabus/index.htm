@@ -1,0 +1,598 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="format-detection" content="telephone=no">
+<title>Syllabus | Probabilistic Systems Analysis and Applied Probability | Electrical Engineering and Computer Science | MIT OpenCourseWare</title>
+<!-- Begin Automatic Metadata Insertion --><meta content="6-041sc-probabilistic-systems-analysis-and-applied-probability-fall-2013" name="WT.cg_n">
+<meta content="Syllabus" name="WT.cg_s">
+<meta content="This syllabus section provides a course overview and information on prerequisites, motivation, objectives, textbook, format, and the teaching team." name="Description">
+<meta content="Tsitsiklis, John" name="Author">
+<meta content="6.041SC,6.041,probability,probability models,bayes rule,discrete random variables,continuous random variables,bernoulli process,poisson process,markov chains,central limit theorem,statistical inference,Systems Engineering,Probability and Statistics,Discrete Mathematics" name="keywords">
+<meta content="6.041SC Probabilistic Systems Analysis and Applied Probability | Syllabus" name="Search_Display">
+<meta content="Systems Engineering" itemprop="about">
+<meta content="Probability and Statistics" itemprop="about">
+<meta content="Discrete Mathematics" itemprop="about">
+<!-- End Automatic Metadata Insertion --><link title="default" rel="stylesheet" type="text/css" href="../../common/styles/grid.css">
+<link title="default" rel="stylesheet" type="text/css" href="../../common/styles/base.css">
+<link title="default" rel="stylesheet" type="text/css" href="../../common/styles/menu.css">
+<link title="default" rel="stylesheet" type="text/css" href="../../common/styles/jquery.bubblepopup.css">
+<link title="default" rel="stylesheet" type="text/css" href="../../common/styles/courses.css">
+<link title="default" rel="stylesheet" type="text/css" href="../../common/styles/courses_new.css">
+<link title="default" rel="stylesheet" type="text/css" href="../../common/styles/scholar2.css">
+<link href="https://ocw.mit.edu/xml/ocwcc.rdf" type="application/rdf+xml" rel="metadata">
+<link rel="canonical" href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-041sc-probabilistic-systems-analysis-and-applied-probability-fall-2013/syllabus/">
+<link rel="apple-touch-icon" href="../../common/images/apple-touch-icon.png">
+<script type="text/javascript" src="../../common/scripts/jquery.js"></script><script type="text/javascript" src="../../common/scripts/ocw-media-utils-offline.js"></script><script type="text/javascript" src="../../common/scripts/ocw-offline.js"></script><script type="text/javascript" src="../../common/scripts/jquery.bubblepopup.min.js"></script><script type="text/javascript" src="../../common/scripts/expandy.js"></script><script type="text/javascript" src="https://ocw.mit.edu//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US&amp;adInstanceId=70ac07d7-b28f-4071-816f-d292aba4849f"></script><script type="text/javascript" src="../../common/scripts/bubble-popup-offline.js"></script>
+</head>
+<body>
+<div id="fbQuote" name="fbQuote">
+        <script>
+          window.fbAsyncInit = function() {
+            FB.init({
+              appId            : '549343822066688',
+              autoLogAppEvents : true,
+              xfbml            : true,
+              version          : 'v2.11'
+            });
+	        FB.AppEvents.logEvent('Share',1);
+          };
+          (function(d, s, id){
+             var js, fjs = d.getElementsByTagName(s)[0];
+             if (d.getElementById(id)) {return;}
+             js = d.createElement(s); js.id = id;
+             js.src = "//connect.facebook.net/en_US/sdk.js";
+             fjs.parentNode.insertBefore(js, fjs);
+           }(document, 'script', 'facebook-jssdk'));
+        </script>
+</div>
+
+
+        
+        
+        
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      
+    
+        
+	
+
+        <header id="top"><div id="grid">
+				
+				
+					
+<div id="portletwrapper-6f63772e746f70706f72746c65746d616e616765720a636f6e746578740a2f506c6f6e650a736974652d686561646572" class="portletWrapper kssattr-portlethash-6f63772e746f70706f72746c65746d616e616765720a636f6e746578740a2f506c6f6e650a736974652d686561646572">
+<div class="portletStaticText portlet-static-site-header">
+<!--googleoff: index-->
+<div class="grid_6 alpha" id="banner"><a href="https://ocw.mit.edu/"><img src="../../common/images/ocw_mast.png" class="logo" alt="MIT OpenCourseWare, Massachusetts Institute of Technology"></a></div>
+<div class="grid_6 omega" id="subscribe">
+<aside class="module" aria-label="Connect with OCW"><table class="social"><tbody><tr>
+<td class="socialbutton"><a aria-label="Subscribe to the OCW Newsletter" href="https://ocw.mit.edu/subscribe/index.htm?utm_source=header"><img src="../../common/images/trans.gif" alt="An icon depicting an envelope.">Subscribe to the OCW Newsletter</a></td>
+            <td>
+<a aria-label="Facebook" href="https://facebook.com/mitocw"><img src="../../common/images/icon_fb.png" alt="Click to visit our Facebook page."></a>   <a aria-label="Twitter" href="https://twitter.com/mitocw"><img src="https://ocw.mit.edu/images/icon_twitter.png" alt="Click to visit our Twitter feed."></a>   <a aria-label="YouTube" href="https://www.youtube.com/mitocw"><img src="https://ocw.mit.edu/images/icon_yt.png" alt="Click to visit our YouTube page."></a>   <a aria-label="Open Matters blog on WordPress" href="https://mitopencourseware.wordpress.com/"><img src="https://ocw.mit.edu/images/icon_wp.png" alt="Click to visit our blog on WordPress."></a>
+</td>
+        </tr></tbody></table></aside><nav aria-label="Help Links" class="helplinks"><a aria-label="OCW Site Help" href="https://ocw.mit.edu/help">Help</a><span aria-hidden="true">|</span>     <a href="../../common/jsp/feedback.htm">Contact Us</a>   </nav>
+</div>
+<div class="clear"> </div>
+<!--googleon: index-->
+</div>
+
+</div>
+
+<div id="portletwrapper-6f63772e746f70706f72746c65746d616e616765720a636f6e746578740a2f506c6f6e650a6d6567612d6d656e75" class="portletWrapper kssattr-portlethash-6f63772e746f70706f72746c65746d616e616765720a636f6e746578740a2f506c6f6e650a6d6567612d6d656e75">
+<div class="portletStaticText portlet-static-mega-menu"><div><nav id="mega" class="grid_8 alpha" aria-label="Site"><ul id="menu" role="presentation">
+<li id="menu_home">
+<a href="https://ocw.mit.edu/" aria-label="Homepage"><img src="../../common/images/top-nav_home.png" class="home_icon" alt="Click for site home page."></a><!-- Begin Home Item -->
+</li>
+    <!-- End Home Item -->
+    <li id="drop_1" aria-label="Find Courses">
+<a href="#" aria-hidden="true">FIND COURSES</a><!-- Begin 5 columns Item -->
+    <div class="dropdown_5columns-a mega-courses">
+    <div class="col_1a">
+    <div class="row_1a">
+<nav aria-labelledby="mm-find-courses-by"><span id="mm-find-courses-by" class="nav" aria-hidden="true">Find courses by:</span>
+    <ul class="find_by" role="presentation">
+<li><a href="https://ocw.mit.edu/courses/find-by-topic/">Topic</a></li>
+        <li><a href="https://ocw.mit.edu/courses/find-by-number/">MIT Course Number</a></li>
+        <li><a href="https://ocw.mit.edu/courses/find-by-department/">Department</a></li>
+    </ul></nav><nav aria-labelledby="mm-collections"><span id="mm-collections" class="nav" aria-hidden="true">Collections</span>
+    <ul role="presentation">
+<li><a href="https://ocw.mit.edu/courses/new-courses/">New Courses</a></li>
+        <li><a href="https://ocw.mit.edu/courses/most-visited-courses/">Most Visited Courses</a></li>
+        <li><a href="https://ocw.mit.edu/courses/ocw-scholar/">OCW Scholar Courses</a></li>
+        <li><a href="https://ocw.mit.edu/courses/audio-video-courses/">Audio/Video Lectures</a></li>
+        <li><a href="https://ocw.mit.edu/courses/online-textbooks/">Online Textbooks</a></li>
+        <li><a href="https://ocw.mit.edu/resources/">Supplemental Resources</a></li>
+        <li><a href="https://ocw.mit.edu/high-school/">OCW Highlights for High School</a></li>
+        <li><a href="https://ocw.mit.edu/courses/mitx-related-courseware/">MITx &amp; Related OCW Courses</a></li>
+    </ul></nav><nav class="col_1b" aria-labelledby="mm-translated-courses"><span id="mm-translated-courses" class="nav" aria-hidden="true" style="line-height: 1.3;">Cross-Disciplinary Topic Lists</span>
+    <ul role="presentation">
+<li><a href="https://ocw.mit.edu/courses/energy-courses">Energy</a></li>
+        <li><a href="https://ocw.mit.edu/courses/entrepreneurship">Entrepreneurship</a></li>
+        <li><a href="https://ocw.mit.edu/courses/environment-courses">Environment</a></li>
+        <li><a href="https://ocw.mit.edu/courses/intro-programming">Introductory Programming</a></li>
+        <li><a href="https://ocw.mit.edu/courses/life-sciences">Life Sciences</a></li>
+        <li><a href="https://ocw.mit.edu/courses/transportation-courses">Transportation</a></li>
+    </ul></nav>
+</div>
+    <div class="row_1b"><nav aria-labelledby="mm-cross-disciplinary-topic-lists"><span id="mm-cross-disciplinary-topic-lists" class="nav" aria-hidden="true">Translated Courses</span>
+    <ul role="presentation">
+<li><a href="https://ocw.mit.edu/courses/translated-courses/traditional-chinese" aria-label="Traditional Chinese">繁體字 / Traditional Chinese</a></li>
+        <li><a href="https://ocw.mit.edu/courses/translated-courses/spanish" aria-label="Spanish">Español / Spanish</a></li>
+        <li><a href="https://ocw.mit.edu/courses/translated-courses/turkish" aria-label="Turkish">Türkçe / Turkish</a></li>
+        <li><a href="https://ocw.mit.edu/courses/translated-courses/korean" aria-label="Korean">(비디오)한국 / Korean</a></li>
+    </ul></nav></div>
+    </div>
+    </div>
+    </li>
+    <li id="drop_2">
+<a href="#" aria-label="For Educators">For Educators</a>
+    <div class="dropdown_1column-a" style="width: 270px;"><nav aria-labelledby="mm-find-courses-by"><span id="mm-find-courses-by" class="nav" aria-hidden="true">OCW Educator Portal</span>
+    <ul role="presentation">
+<li><a href="https://ocw.mit.edu/educator/?view=instructional&amp;utm_campaign=Educator&amp;utm_source=megamenu&amp;utm_medium=find-courses&amp;utm_content=approaches">Search for Instructor Insights</a></li>
+        <li><a href="https://ocw.mit.edu/educator/?view=teaching&amp;utm_campaign=Educator&amp;utm_source=megamenu&amp;utm_medium=find-courses&amp;utm_content=materials">Search for Teaching Materials</a></li>
+    </ul>
+<span id="mm-collections" class="nav" aria-hidden="true">OCW Collections</span>
+    <ul role="presentation">
+<li><a href="https://ocw.mit.edu/courses/instructor-insights/">Instructor Insights by Department</a></li>
+        <li><a href="https://ocw.mit.edu/courses/find-by-topic/#cat=teachingandeducation">MIT Courses about Teaching and Education</a></li>
+    </ul>
+<span id="mm-collections" class="nav" aria-hidden="true">K-12</span>
+    <ul role="presentation">
+<li><a href="https://ocw.mit.edu/high-school/">OCW Highlights for High School</a></li>
+        <li><a href="https://www.k12videos.mit.edu/videos" aria-label="External Link: MIT Plus K12 Videos">MIT+K12 Videos</a></li>
+    </ul>
+<span id="mm-higher-ed" class="nav" aria-hidden="true">Higher Ed</span>
+    <ul>
+<li><a href="https://teachingexcellence.mit.edu/" aria-label="External Link: Teaching Excellence at MIT">Teaching Excellence at MIT</a></li>
+        <li><a href="https://ocw.mit.edu/courses/mit-curriculum-guide/">MIT Undergraduate Curriculum Map</a></li>
+    </ul></nav></div>
+    </li>
+    <li id="drop_3">
+<a href="#" aria-hidden="true">Give Now</a>
+    <div class="dropdown_1column-a"><nav class="col_1" aria-label="Donate"><ul role="presentation">
+<li><a href="https://ocw.mit.edu/give/">Make a Donation</a></li>
+        <li><a href="https://ocw.mit.edu/give/why-give/">Why Give?</a></li>
+        <li><a href="https://ocw.mit.edu/give/our-supporters/">Our Supporters</a></li>
+        <li><a href="https://ocw.mit.edu/give/other-ways-to-contribute/">Other Ways to Contribute</a></li>
+        <li><a href="https://ocw.mit.edu/give/shop-ocw">Shop OCW</a></li>
+        <li><a href="https://ocw.mit.edu/support/">Become a Corporate Sponsor</a></li>
+    </ul></nav></div>
+    </li>
+    <li id="drop_4">
+<a href="#" aria-hidden="true">About</a>
+    <div class="dropdown_1column-a"><nav class="col_1" aria-label="About"><ul role="presentation">
+<li><a href="https://ocw.mit.edu/about/">About MIT OpenCourseWare</a></li>
+        <li><a href="https://ocw.mit.edu/about/site-statistics/">Site Statistics</a></li>
+        <li><a href="https://ocw.mit.edu/about/ocw-stories/">OCW Stories</a></li>
+        <li><a href="https://ocw.mit.edu/about/newsletter/">News</a></li>
+    </ul></nav></div>
+    </li>
+</ul></nav></div></div>
+
+</div>
+
+
+
+
+
+<!--googleoff: index-->
+
+<div id="search" role="search" class="grid_4 omega">
+  
+    <form aria-label="Advanced Search" method="get" action="../../common/search/AdvancedSearch.htm">
+		  <table class="search"><tbody><tr>
+<td class="black"><input type="text" onblur="fillSearchBox()" onfocus="clearSearchBox()" maxlength="255" value="Search" name="q" class="greytext searchField" id="terms"></td>
+            <td class="black"><input type="image" src="../../common/images/button_search.png" name="btnG" class="sub_button"></td>
+            <td class="text2"><a href="../../common/search/AdvancedSearch.htm">Advanced<br>Search</a></td>
+          </tr></tbody></table>
+</form>
+</div>
+<div class="clear"></div>
+<!--googleon: index-->
+<!-- *end header* -->
+
+				
+				
+			</div>
+<!-- top grid end -->
+		</header><!-- top end --><div id="center">
+         <div id="grid">
+		     <div id="left-section">
+                 <nav id="breadcrumb" aria-label="Breadcrumb"><p>
+
+    <a href="https://ocw.mit.edu/">Home</a>
+    
+        »
+        
+    
+    
+        
+            <a href="https://ocw.mit.edu/courses">Courses</a>
+            
+                »
+                
+            
+            
+         
+    
+    
+        
+            <a href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science">Electrical Engineering and Computer Science</a>
+            
+                »
+                
+            
+            
+         
+    
+    
+        
+            <a href="../../contents/index.htm">Probabilistic Systems Analysis and Applied Probability</a>
+            
+                »
+                
+            
+            
+         
+    
+    
+        
+            
+            
+            Syllabus
+         
+    
+</p>
+
+                 </nav><div class="clear"></div>
+                 <div id="section_title">
+           			<h1 class="title" itemprop="name" property="dct:title">
+        <span class="" id="parent-fieldname-title">
+            Syllabus
+        </span>
+    </h1>
+           	     </div>
+           	     <div class="clear"></div>
+           	     <div id="course_wrapper_section">
+           	     	 <nav id="course_nav" aria-label="Course"><script language="javascript" type="text/javascript">
+function toggleMenu(objID) {
+  if (!document.getElementById) return;
+  var ob = document.getElementById(objID);
+  ob.className = (ob.className == 'selected')?'': 'selected';
+}
+function toggleClass(id)
+{
+  var divtoggleClass= document.getElementById(id);
+  divtoggleClass.className = (divtoggleClass.className == 'mO')?'mC': 'mO';
+  return false;
+}
+function changeAlt(id)
+{
+  id.alt = (id.alt == 'Expand Menu')?'Collapse Menu' : 'Expand Menu';
+  id.title = (id.title == 'Expand Menu')?'Collapse Menu' : 'Expand Menu';
+}
+</script><!--Left Nav Starts --><ul>
+<li class="">
+			   			<a href="../../contents/index.htm">
+		                  Course Home  			                
+	                    </a>
+		        </li>
+		    
+         	
+	
+	
+	    	
+         	<li class="selected">
+       		<div class="tlp_links">
+	        	
+			    <div class="mC" id="syllabus">
+						<a href="#" class="selected" onclick="toggleMenu('menusyllabus'); toggleClass('syllabus'); return false">
+		                  <img src="../../common/images/trans.gif" class="expandCollapseTrans" alt="Collapse Menu" title="Collapse Menu" border="0" width="10" height="12" onclick="changeAlt(this)"></a>
+		                <a href="../../contents/syllabus/index.htm" class="selected">
+		                  Syllabus  			                
+	                    </a>
+                   	
+			    </div>
+	        	
+			    <ul class="selected" id="menusyllabus">
+<li> 
+		                <a href="../../contents/syllabus/meet-the-team/index.htm" class="">Meet The Team</a>
+		            </li>
+			    </ul>
+</div>
+			</li>
+	
+	
+	    	
+         	<li class="">
+       		<div class="tlp_links">
+	        	<div id="unit-i" class="mO">
+						<a href="#" class="" onclick="toggleMenu('menuunit-i'); toggleClass('unit-i'); return false">
+		                  <img src="../../common/images/trans.gif" class="expandCollapseTrans" border="0" width="10" height="12" onclick="changeAlt(this)" alt="Expand Menu" title="Expand Menu"></a>
+		                <a href="../../contents/unit-i/index.htm" class="">
+		                  Unit I: Probability Models And Discrete Random Variables  			                
+	                    </a>
+	                 			                
+	            </div>
+			    
+	        	<ul id="menuunit-i" class="">
+<li class="">
+				 		<a href="../../contents/unit-i/lecture-1/index.htm" class="">Lecture 1</a>
+		            </li>
+		            <li class="">
+				 		<a href="../../contents/unit-i/lecture-2/index.htm" class="">Lecture 2</a>
+		            </li>
+		            <li class="">
+				 		<a href="../../contents/unit-i/lecture-3/index.htm" class="">Lecture 3</a>
+		            </li>
+		            <li class="">
+				 		<a href="../../contents/unit-i/lecture-4/index.htm" class="">Lecture 4</a>
+		            </li>
+		            <li class="">
+				 		<a href="../../contents/unit-i/lecture-5/index.htm" class="">Lecture 5</a>
+		            </li>
+		            <li class="">
+				 		<a href="../../contents/unit-i/lecture-6/index.htm" class="">Lecture 6</a>
+		            </li>
+		            <li class="">
+				 		<a href="../../contents/unit-i/lecture-7/index.htm" class="">Lecture 7</a>
+		            </li>
+		            <li class="">
+				 		<a href="../../contents/unit-i/quiz-1/index.htm" class="">Quiz 1</a>
+		            </li>
+			    </ul>
+</div>
+			</li>
+	
+	
+	    	
+         	<li class="">
+       		<div class="tlp_links">
+	        	<div id="unit-ii" class="mO">
+						<a href="#" class="" onclick="toggleMenu('menuunit-ii'); toggleClass('unit-ii'); return false">
+		                  <img src="../../common/images/trans.gif" class="expandCollapseTrans" border="0" width="10" height="12" onclick="changeAlt(this)" alt="Expand Menu" title="Expand Menu"></a>
+		                <a href="../../contents/unit-ii/index.htm" class="">
+		                  Unit II: General Random Variables  			                
+	                    </a>
+	                 			                
+	            </div>
+			    
+	        	<ul id="menuunit-ii" class="">
+<li class="">
+				 		<a href="../../contents/unit-ii/lecture-8/index.htm" class="">Lecture 8</a>
+		            </li>
+		            <li class="">
+				 		<a href="../../contents/unit-ii/lecture-9/index.htm" class="">Lecture 9</a>
+		            </li>
+		            <li class="">
+				 		<a href="../../contents/unit-ii/lecture-10/index.htm" class="">Lecture 10</a>
+		            </li>
+		            <li class="">
+				 		<a href="../../contents/unit-ii/lecture-11/index.htm" class="">Lecture 11</a>
+		            </li>
+		            <li class="">
+				 		<a href="../../contents/unit-ii/lecture-12/index.htm" class="">Lecture 12</a>
+		            </li>
+		            <li class="">
+				 		<a href="../../contents/unit-ii/quiz-2/index.htm" class="">Quiz 2</a>
+		            </li>
+			    </ul>
+</div>
+			</li>
+	
+	
+	    	
+         	<li class="">
+       		<div class="tlp_links">
+	        	<div id="unit-iii" class="mO">
+						<a href="#" class="" onclick="toggleMenu('menuunit-iii'); toggleClass('unit-iii'); return false">
+		                  <img src="../../common/images/trans.gif" class="expandCollapseTrans" border="0" width="10" height="12" onclick="changeAlt(this)" alt="Expand Menu" title="Expand Menu"></a>
+		                <a href="../../contents/unit-iii/index.htm" class="">
+		                  Unit III: Random Processes  			                
+	                    </a>
+	                 			                
+	            </div>
+			    
+	        	<ul id="menuunit-iii" class="">
+<li class="">
+				 		<a href="../../contents/unit-iii/lecture-13/index.htm" class="">Lecture 13</a>
+		            </li>
+		            <li class="">
+				 		<a href="../../contents/unit-iii/lecture-14/index.htm" class="">Lecture 14</a>
+		            </li>
+		            <li class="">
+				 		<a href="../../contents/unit-iii/lecture-15/index.htm" class="">Lecture 15</a>
+		            </li>
+		            <li class="">
+				 		<a href="../../contents/unit-iii/lecture-16/index.htm" class="">Lecture 16</a>
+		            </li>
+		            <li class="">
+				 		<a href="../../contents/unit-iii/lecture-17/index.htm" class="">Lecture 17</a>
+		            </li>
+		            <li class="">
+				 		<a href="../../contents/unit-iii/lecture-18/index.htm" class="">Lecture 18</a>
+		            </li>
+			    </ul>
+</div>
+			</li>
+	
+	
+	    	
+         	<li class="">
+       		<div class="tlp_links">
+	        	<div id="unit-iv" class="mO">
+						<a href="#" class="" onclick="toggleMenu('menuunit-iv'); toggleClass('unit-iv'); return false">
+		                  <img src="../../common/images/trans.gif" class="expandCollapseTrans" border="0" width="10" height="12" onclick="changeAlt(this)" alt="Expand Menu" title="Expand Menu"></a>
+		                <a href="../../contents/unit-iv/index.htm" class="">
+		                  Unit IV: Laws Of Large Numbers And Inference  			                
+	                    </a>
+	                 			                
+	            </div>
+			    
+	        	<ul id="menuunit-iv" class="">
+<li class="">
+				 		<a href="../../contents/unit-iv/lecture-19/index.htm" class="">Lecture 19</a>
+		            </li>
+		            <li class="">
+				 		<a href="../../contents/unit-iv/lecture-20/index.htm" class="">Lecture 20</a>
+		            </li>
+		            <li class="">
+				 		<a href="../../contents/unit-iv/lecture-21/index.htm" class="">Lecture 21</a>
+		            </li>
+		            <li class="">
+				 		<a href="../../contents/unit-iv/lecture-22/index.htm" class="">Lecture 22</a>
+		            </li>
+		            <li class="">
+				 		<a href="../../contents/unit-iv/lecture-23/index.htm" class="">Lecture 23</a>
+		            </li>
+		            <li class="">
+				 		<a href="../../contents/unit-iv/lecture-24/index.htm" class="">Lecture 24</a>
+		            </li>
+		            <li class="">
+				 		<a href="../../contents/unit-iv/lecture-25/index.htm" class="">Lecture 25</a>
+		            </li>
+			    </ul>
+</div>
+			</li>
+	
+	
+	    	
+	    	    <li class="">
+			   			<a href="../../contents/final-exam/index.htm">
+		                  Final Exam  			                
+	                    </a>
+		        </li>
+		    
+         	
+	
+	
+	    	
+	    	    <li class="">
+			   			<a href="../../contents/resource-index/index.htm">
+		                  Resource Index  			                
+	                    </a>
+		        </li>
+		    
+         	
+	
+	
+	    	
+	    	    
+		    
+         	
+	<!--second tal block close-->  
+	
+</ul>
+<!--Left Nav Ends --></nav><main id="course_inner_section" aria-labelledby="section_title"><div>
+           		     	<p><img src="../../common/images/scholar_bar.png" style="width: 780px; height: 32px; border: 1px solid #790835; margin-top: -16px;" alt="OCW Scholar"></p>
+ 						</div>
+           		    	
+	                   <p class="sc_nav">« <a class="sc_prev" href="../../contents/index.htm">Previous</a> | <a class="sc_next" href="../../contents/Syllabus/meet-the-team">Next</a> »</p> <h2 class="subhead">Course Overview</h2> <p>This course is an introduction to probabilistic modeling, including random processes and the basic elements of statistical inference. The ability to think probabilistically is a fundamental component of scientific literacy. You will learn the relevant models, skills, and tools that are the keys to analyzing data and making scientifically sound predictions under uncertainty. We emphasize the basic concepts and methodologies, and include dozens of examples and applications.</p> <p>Probabilistic Systems Analysis has been offered and continuously refined at MIT for more than fifty years. The class is offered through the Electrical Engineering Department and has, over time, served multiple constituencies from engineering, operations research, and the sciences. Unlike traditional mathematics classes, it aims to develop the skills and intuition that are most useful to practicing engineers and scientists. On campus, it is taken by a large number of students with  diverse backgrounds and a broad range of interests. They span the  entire spectrum from freshman to beginning graduate students, and from  the Engineering School to the School of Management.</p> <h2 class="subhead">Prerequisites</h2> <p>The prerequisites for this course are <a href="https://ocw.mit.edu/courses/mathematics/18-01sc-single-variable-calculus-fall-2010"><em>18.01 Single Variable Calculus</em></a> and <a href="https://ocw.mit.edu/courses/mathematics/18-02sc-multivariable-calculus-fall-2010"><em>18.02 Multivariable Calculus</em></a> </p> <p>Although this is not a mathematics course, it does rely on the language and some tools from mathematics. It requires a level of comfort with mathematical reasoning, familiarity with sequences, limits, infinite series, and the chain rule, as well as the ability to work with ordinary or multiple integrals.</p> <h2 class="subhead">Why Study Probability?</h2> <p>Until quite recently, scientific literacy meant knowing calculus, some physics, and some chemistry. Even with the introduction of computers and computation, this was all that you needed to know in order to make sense of the world. But these days, you cannot understand what is going on around you if you do not understand the uncertainty attached to nearly every phenomenon. This is why probability is now a central component of scientific literacy.</p>
+<p>What is it that has changed and has caused this shift? There are two main factors:</p>
+<ul>
+<li>Increasing complexity. As science and engineering move forward, we end up dealing with more and more complex systems. In a complex system, we cannot expect to have a perfect model of each component or to know the exact state of every piece of the system. So, uncertainty is now at the foreground, and needs to be modeled.</li>
+<li>Abundance of information. We live in an information society. Data and information play a central role both in our individual lives and in the economy as a whole. They are only useful because they can tell us something we did not know. Their reason for existence is to reduce uncertainty. But if your goal is to reduce uncertainty, to fight it, you’d better understand its nature, so you’d better have the tools to describe it and analyze it. And this is why understanding probability theory and its children–statistics and inference–is a must.</li>
+</ul>
+<p>If these arguments sound a bit abstract, just think of any scientific field, and you quickly realize that pretty much everything is subject to uncertainty and calls for probabilistic models. For example:</p>
+<ul>
+<li>Quantum mechanics has taught us that nature is inherently uncertain.</li>
+<li>Biological evolution progresses through the accumulation of many random effects (such as mutations) within an uncertain environment.</li>
+<li>Biological data is rapidly amassing, and that data needs to be sifted, using statistical tools, to extract useful information.</li>
+<li>Communications and signal processing are largely a fight against noise. The effort to clean signals from noise that nature has added is essential to successful communication.</li>
+<li>Customer demand is random, yet you need to be able to model it and predict it.</li>
+<li>Financial markets are uncertain. Whoever has the best methods to analyze financial data has an advantage.</li>
+<li>Transportation systems are subject to random disruptions, due to weather or accidents, and are a major concern.</li>
+<li>Social network trends spread like epidemics and in ways that are hard to predict.</li>
+</ul>
+<p>The message is clear: most phenomena of interest involve significant randomness, and the only reason we collect and manipulate data is because we want to fight this randomness as much as we can. The first step in fighting an enemy like randomness is to study and understand it.</p>
+<h2 class="subhead">Course Objectives</h2> <p>Conceptual:</p> <ul>
+<li>Master the basic concepts associated with probability models.</li>     <li>Be able to translate models described in words to mathematical ones.</li>     <li>Understand the main concepts and assumptions underlying Bayesian and classical inference.</li>     <li>Obtain some familiarity with the range of applications of inference methods.</li> </ul>
+<p>More technical:</p> <ul>
+<li>Become familiar with basic and common probability distributions.</li>     <li>Learn how to use conditioning to simplify the analysis of complicated models.</li>     <li>Have facility manipulating probability mass functions, densities, and expectations.</li>     <li>Understand the power of laws of large numbers and be able to use them when appropriate.</li>     <li>Develop a solid understanding of the concept of conditional expectation and its role in inference.</li>     <li>Learn how to formulate simple dynamical models as Markov chains and analyze them.</li>     <li>Become familiar with the basic inference methodologies (for both estimation and hypothesis testing) and be able to apply them.</li> </ul>
+<h2 class="subhead">Textbook</h2> <p>The text for this course is:</p> <p><a href="http://www.amazon.com/exec/obidos/ASIN/188652923X/ref=nosim/mitopencourse-20"><img border="0" align="absMiddle" alt="Buy at Amazon" src="http://ocw.mit.edu/images/a_logo_17.gif"></a> Bertsekas, Dimitri, and John Tsitsiklis. <em>Introduction to Probability. </em>2nd ed. <a href="http://www.athenasc.com/">Athena Scientific</a>, 2008. ISBN: 9781886529236.</p> <h2 class="subhead">Format</h2> <p>This OCW Scholar course, designed for independent study, is closely modeled on the course taught on the MIT campus. The on-campus course has three types of class sessions: lectures,  recitations, and  tutorials. The lectures and recitations each meet twice  a week, and the optional tutorial meets once a week.</p> <ul>
+<li>Lectures introduce new concepts. They have an overview   character, but also include some derivations and motivating   applications.</li>     <li>In recitations, the instructor elaborates on concepts presented in lecture,   working through new examples with student participation, and answers questions.</li>     <li>In tutorials, students discuss and solve new examples   with some help from classmates and the instructor. Tutorials   are active sessions designed to help students develop confidence in thinking about   probabilistic situations in real time.</li> </ul>
+<p>MIT students who take the corresponding residential class typically   report an average of 11-12 hours spent each week, including lectures,   recitations, readings, homework, and exams.</p> <p>The OCW Scholar course combines content previously published on the<em> </em>Fall 2010 OCW site <a href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-041-probabilistic-systems-analysis-and-applied-probability-fall-2010"><em>6.041 Probabilistic Systems Analysis and Applied Probability</em></a> with 51 new videos recorded in 2013 by MIT Teaching Assistants. The Scholar course has four major learning units. Each unit has been divided into a sequence of lecture sessions that include</p>
+<ul>
+<li>A lecture  video by Professor Tsitsiklis</li>
+<li>The slides shown in that lecture</li>
+<li>Suggested textbook readings</li>
+</ul>
+<p>Most sessions also include:</p>
+<ul>
+<li>Recitation Problems and Solutions</li>
+<li>Tutorial Problems and Solutions</li>
+</ul>
+<p>To help guide your learning, some of these problems have an accompanying Help Video where an MIT Teaching Assistant solves the same problem.</p> <p>In addition to the Recitation and Tutorial Problems, the course also has Problem Sets and Exams with Solutions.</p> <p>It's difficult to estimate  how long it will take you to complete the  course, but you can probably  expect to spend several hours working  through each individual lecture  session.</p> <h2 class="subhead"><a href="../../contents/Syllabus/meet-the-team">Meet the Team</a></h2> <p>This OCW Scholar course was developed by John Tsitsiklis, Professor of Electrical Engineering, with the Department of Electrical Engineering and Computer Science (EECS) at MIT. The Help Session Videos were developed by MIT Teaching Assistants Qing He, Jimmy Li, Jagdish Ramakrishnan, Katie Szeto, and Kuang Xu. To learn more, visit the <a href="../../contents/Syllabus/meet-the-team">Meet the Team</a> page.</p> <p class="sc_nav_bottom">« <a class="sc_prev" href="../../contents/index.htm">Previous</a> | <a class="sc_next" href="../../contents/Syllabus/meet-the-team">Next</a> »</p>    
+	                    
+    
+    
+    
+
+
+	        			
+	                    
+	                    
+	                    
+	                    
+
+    			    </main><!--Course_inner_section tag close --><div class="clear"></div>
+ 				 </div>
+<!--Course_wrapper tag close -->             
+ 			 </div>
+<!--left tag close -->
+ 			               
+         </div>
+<!--grid tag close --> 
+      </div>
+		
+		<footer id="bottom"><div id="grid">
+				
+<div id="portletwrapper-6f63772e626f74746f6d706f72746c65746d616e616765720a636f6e746578740a2f506c6f6e650a736974652d666f6f746572" class="portletWrapper kssattr-portlethash-6f63772e626f74746f6d706f72746c65746d616e616765720a636f6e746578740a2f506c6f6e650a736974652d666f6f746572">
+<div class="portletStaticText portlet-static-site-footer"><div id="footer">
+<nav aria-label="Footer"><nav id="foot-c1" class="grid_2 alpha" aria-labelledby="f-find-courses"><span class="footer" id="f-find-courses" aria-hidden="true">Find Courses</span> <ul class="foot-bullet" role="presentation">
+<li><a href="https://ocw.mit.edu/courses/find-by-topic/">Find by Topic</a></li>     <li><a href="https://ocw.mit.edu/courses/find-by-number/">Find by Course Number</a></li>     <li><a href="https://ocw.mit.edu/courses/find-by-department/">Find by Department</a></li>     <li><a href="https://ocw.mit.edu/courses/new-courses/">New Courses</a></li>     <li><a href="https://ocw.mit.edu/courses/most-visited-courses/">Most Visited Courses</a></li>     <li><a href="https://ocw.mit.edu/courses/ocw-scholar/">OCW Scholar Courses</a></li>     <li><a href="https://ocw.mit.edu/courses/audio-video-courses/">Audio/Video Courses</a></li>     <li><a href="https://ocw.mit.edu/courses/subtitled/">Courses with Subtitles</a></li>     <li><a href="https://ocw.mit.edu/courses/online-textbooks/">Online Textbooks</a></li>     <li><a href="https://ocw.mit.edu/courses/instructor-insights/">Instructor Insights</a></li>     <li><a href="https://ocw.mit.edu/resources/">Supplemental Resources</a></li>     <li><a href="https://ocw.mit.edu/courses/mitx-related-courseware/">MITx &amp; Related OCW Courses</a></li>     <li><a href="https://ocw.mit.edu/courses/translated-courses/">Translated Courses</a></li> </ul></nav><div id="foot-c2" class="grid_2"><nav aria-labelledby="f-for-educators"><span id="f-for-educators" class="footer" aria-hidden="true">For Educators</span> <ul class="foot-bullet" role="presentation">
+<li><a href="https://ocw.mit.edu/educator/?view=instructional&amp;utm_campaign=Educator&amp;utm_source=footer&amp;utm_medium=find-courses&amp;utm_content=approaches">Search for Instructor Insights</a></li>     <li><a href="https://ocw.mit.edu/educator/?view=teaching&amp;utm_campaign=Educator&amp;utm_source=footer&amp;utm_medium=find-courses&amp;utm_content=materials">Search for Teaching Materials</a></li>     <li><a href="https://ocw.mit.edu/courses/instructor-insights/">Instructor Insights by Department</a></li>     <li><a href="https://ocw.mit.edu/courses/find-by-topic/#cat=teachingandeducation">MIT Courses about Teaching and Education</a></li>     <li><a href="https://ocw.mit.edu/high-school/">Highlights for High School</a></li>     <li><a href="http://k12videos.mit.edu" aria-label="External Link: MIT+K12 Videos">MIT+K12 Videos</a></li>     <li><a href="http://teachingexcellence.mit.edu/" aria-label="External Link: Teaching Excellence at MIT">Teaching Excellence at MIT</a></li>     <li><a href="https://ocw.mit.edu/courses/mit-curriculum-guide/">MIT Undergraduate Curriculum Map</a></li> </ul></nav></div> <nav class="grid_2" id="foot-c3" aria-labelledby="f-donate"><span id="f-donate" class="footer" aria-hidden="true">Give Now</span> <ul class="foot-bullet" role="presentation">
+<li><a href="https://ocw.mit.edu/give/">Make a Donation</a></li>     <li><a href="https://ocw.mit.edu/give/why-give/">Why Give?</a></li>     <li><a href="https://ocw.mit.edu/give/our-supporters/">Our Supporters</a></li>     <li><a href="https://ocw.mit.edu/give/other-ways-to-contribute/">Other Ways to Contribute</a></li>     <li><a href="https://ocw.mit.edu/give/shop-ocw/">Shop OCW</a></li>     <li><a href="https://ocw.mit.edu/support/">Become a Corporate Sponsor</a></li> </ul></nav><div class="grid_2" id="foot-c4">
+<nav aria-labelledby="f-about"><span id="f-about" class="footer" aria-hidden="true">About</span> <ul class="foot-bullet" role="presentation">
+<li><a href="https://ocw.mit.edu/about/">About OpenCourseWare</a></li>     <li><a href="https://ocw.mit.edu/about/site-statistics/">Site Statistics</a></li>     <li><a href="https://ocw.mit.edu/about/ocw-stories/">OCW Stories</a></li>     <li><a href="https://ocw.mit.edu/about/newsletter/">News</a></li>     <li><a href="https://ocw.mit.edu/about/media-coverage/press-releases/">Press Releases</a></li> </ul></nav><!--about--><nav aria-labelledby="f-tools"><span id="f-tools" class="footer" aria-hidden="true">Tools</span> <ul class="foot-bullet" role="presentation">
+<li><a href="https://ocw.mit.edu/help/">Help &amp; FAQs</a></li>     <li><a href="../../common/jsp/feedback.htm">Contact Us</a></li>     <li><a href="../../common/search/AdvancedSearch.htm">Advanced Search</a></li>     <li><a href="https://ocw.mit.edu/help/site-map/">Site Map</a></li>     <li><a href="../../common/terms/index.htm">Privacy &amp; Terms of Use</a></li>     <li><a href="https://ocw.mit.edu/help/rss/">RSS Feeds</a></li> </ul></nav><!--tools-->
+</div> </nav><aside style="min-height: 289px;" aria-labelledby="f-our-corporate-supporters" class="grid_4 omega" id="foot-c5"><span aria-hidden="true" class="footer" id="f-our-corporate-supporters">Our Corporate Supporters</span>           <!-- HOME_CORP_LOGO_1 --> <div id="div-gpt-ad-1388181177156-0" class="sponsors_google_ads_even"><script type="text/javascript">
+              googletag.cmd.push(function() { googletag.display('div-gpt-ad-1388181177156-0'); });
+            </script></div> <!-- HOME_CORP_LOGO_2 --> <div id="div-gpt-ad-1388181177156-1" class="sponsors_google_ads_odd"><script type="text/javascript">
+              googletag.cmd.push(function() { googletag.display('div-gpt-ad-1388181177156-1'); });
+            </script></div> <!-- HOME_CORP_LOGO_3 --> <div id="div-gpt-ad-1388181177156-2" class="sponsors_google_ads_even"><script type="text/javascript">
+              googletag.cmd.push(function() { googletag.display('div-gpt-ad-1388181177156-2'); });
+            </script></div> <!-- HOME_CORP_LOGO_4 --> <div id="div-gpt-ad-1388181177156-3" class="sponsors_google_ads_odd"><script type="text/javascript">
+              googletag.cmd.push(function() { googletag.display('div-gpt-ad-1388181177156-3'); });
+            </script></div> <!-- HOME_CORP_LOGO_5 --> <div id="div-gpt-ad-1388181177156-4" class="sponsors_google_ads_even"><script type="text/javascript">
+              googletag.cmd.push(function() { googletag.display('div-gpt-ad-1388181177156-4'); });
+              </script></div> <!-- HOME_CORP_LOGO_6 --> <div id="div-gpt-ad-1388181177156-5" class="sponsors_google_ads_odd"><script type="text/javascript">
+              googletag.cmd.push(function() { googletag.display('div-gpt-ad-1388181177156-5'); });
+              </script></div> </aside><div class="grid_12 alpha omega" itemprop="publisher" itemscope="" itemtype="http://schema.org/CollegeOrUniversity">
+<h4 class="footer" style="border-top: thin solid #d5c9ba; padding-top: 10px; margin-bottom: 10px;">About <span itemprop="name">MIT OpenCourseWare</span>
+</h4> <p style="color: #999; font-size: 1em; line-height: 1.5em; margin-top: 10px;" itemprop="description">MIT OpenCourseWare makes the materials used in the teaching of almost all of MIT's subjects available on the Web, free of charge. With more than 2,400 courses available, OCW is delivering on the promise of open sharing of knowledge. <a href="http://ocw.mit.edu/about/">Learn more »</a></p>
+</div> <div id="foot-copy" class="grid_12 alpha omega" style="border-top: none;">
+<a href="http://web.mit.edu"><img src="../../common/images/logo_mit.png" alt="Massachusetts Institute of Technology logo and name." style="width: 195; height: 44;"></a><a href="http://odl.mit.edu"><img src="https://ocw.mit.edu/images/logo_odl.png" alt="MIT Office of Digital Learning logo and name." style="width: 289; height: 54; vertical-align: top;"></a><a href="http://www.oeconsortium.org/"><img src="https://ocw.mit.edu/images/logo_oec.png" alt="Open Education Consortium logo." style="width: 219px; height: 59px; vertical-align: top;"></a><a rel="license" itemprop="useRightsUrl" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="../../common/images/cc_by-nc-sa.png" alt="Creative Commons logo with terms BY-NC-SA." style="width: 126px; height: 44px; margin-right: 0; margin-left: 13px;"></a> <p class="copyright">© 2001–2018<br> Massachusetts Institute of Technology</p> <p style="font-size: 0.9em; margin-bottom: 15px;">Your use of the MIT OpenCourseWare site and materials is subject to our <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">Creative Commons License</a> and other <a href="../../common/terms/index.htm" rel="cc:morePermissions">terms of use</a>.</p>
+</div>
+</div></div>
+
+</div>
+
+
+
+
+
+                
+			</div> <!-- bottom grid end -->
+		</footer><!-- footer bottom end -->
+</body>
+</html>

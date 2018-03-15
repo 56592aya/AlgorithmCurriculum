@@ -1,0 +1,11 @@
+Something interesting about the range and xrange: rangein python2.7 generates the entire sequence when it is invoked, so for example range(1000000) uses quitre lot of memory. instead we can avoid this by using xrange that create the value only as they needed. But in python3 range behaves the same way as xrange does in 2.7.
+Also it is worth noting that range is only evaluated just before the first iteration of the loop and not reevaluated at subsequent iterations. A good example that elaborates this is as follows:
+x = 4
+for j in range(x):
+	for i in range(x):
+		print(i)
+		x = 2
+
+so what happens the range(x) in the first outer loop is determined once so we are going to do things 4 times. The first time we ecounter the inner loop we are going to do what is inside the inner loop 4 times, but when going to the next j the inner loop that runs over i is now reevaluated where x is 2, and you know aht is gonna happen....
+ 
+Also as noted in the end of the lecture, you can always rewrite a for loop using a while loop, but not necessarily the other way around.

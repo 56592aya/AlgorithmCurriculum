@@ -1,0 +1,166 @@
+These are the notes for first session
+Ch1:
+(p -> q) is  equivalent to (~q->~p) and (~p or q)
+::= means quality by definition
+(~q->~p) is the contrapositive of (p->q) and (q->p) is converse of (p->q)
+Not in text but my truth table tells me that (p iff q) is equivalent to ~(p xor q)
+
+An interesting example in the chapter was as follows:
+Exists x Forall y .P(x,y) IMPLIES Forall y Exists x. P(x,y)
+For now we used interpretation of the words to prove that this is "valid"(validity of a proposition means that it evaluates to True). Although we can see also that the converse is not true.
+Axioms shoudl be:
+- consistent: if no proposition can be proved to be both T or F.
+- complete:if it can be used to prove every propostion is T or F.
+
+A proposition is said to be "satisfiable" if there is a setting that the it evaluates as True, for example (p ANd ~P) is not satisfiable.
+One way to check whether a proposistion is satisfiable is to construct the truth table, but this could be cumbersome, if we have n variables, then there are 2^n lines in the table, and it is not efficient.(this is called the SAT way). Is there a way to do this polynomially(n^2, or n^4)?
+The problem of whether SAT has a polynomiall answer is known as the "P vs NP" problem, and is an outstanding unanswered problem.
+
+Ch2:
+This chapter talks about patterns of proof.
+
+One way is known as the "Axiomatic" approach.
+We start from a very bsaic true axioms, and use them to construct proofs.
+"A proof is a sequence of logical deductions from axioms and previously proced statements that conclude with the proposition in question".
+
+There are common names for a proposition that has been proved, but with slightly different underlying purposes:
+- Theorem:Important propositions
+- Lemma: a preliminary proposition useful to prove a later proposition
+- Corollary: a proposition that follows in just a few logical steps from the lemma or theorem.
+"Logical deducutions" or "inference rules" are used to prove new propositions.
+One such rule is known as "modus ponens" which says that a proof of p and a proof of (p implies q) is a proof of q.
+Here are some rules:
+- Rule 1(modus ponens):
+(p), P(p -> q)
+-------------
+q
+- Rule 2:
+(p ->q), (q -> r)
+-----------------
+(p->r)
+- Rule 3:
+(p -> q), (~q)
+--------------
+~(p)
+
+- Rule 4:
+(~p -> ~q)
+------------
+(q->p)
+
+Here are some patterns or templates for proofs:
+- proof by cases:
+acuqntance example: imagine if there is a group that all of its pairs have met is known as a club and if every pair of a group has not met, they are called strangers.
+Theorem: Every collection of 6 people includes a club of 3 people or a group of 3 strangers.
+The way we want to prove this is proof by cases.(mention this)
+Proof: let x denote one of the six people, there are two cases:
+1- among the other 5 people besides x, at least 3 have met x
+2 -among the other 5 people at least 3 have not met x
+(show that you have covered all the cases in your analysis)
+case1: suppose at least 3 people have met x, this splits in two sub-cases
+case 1.1: among those met x, non of the have met each other, then that group is a group of at least 3 strangers, so the theorem holds for this subcase.
+case 1.2: amond people who have met x, some pair have met each other, then together with x, form a club of 3, so it holds in this subcase.
+This implies that the theorem holds for case 1.
+Now case 2:
+case 2.1:among the people who have not met x, every pair hsa met each other, then the people who have not met x, are in a club of at least 3 poeple, so the theorem holds for this subcase.
+case 2.2: among those who have not me x, some pair have not met each other, which together with x, will form a group of strangers, and theorem holds for this subcase.
+So theorem holds for case 2 as well.
+Therefore holds for all cases.
+To me this is interesting for the word includes in the theorem, does that mean that a club-3 or a strangers-3 is a subset of a group-6? Or it is a bit vague to me as to why this has turned into at least in the case decompositions.
+
+Proving an implication: implication is like (p -> q)
+There are different methods to prove an implications:
+Method 1: Assume P is true
+Method 2: prove the conrapositive
+
+
+Proving a (p iff q)
+Method 1: prove each statement implied the other
+Method 2: construct a chaing of iff's
+example for method 2:
+Theorem: the standard deviation of a sequence of values, x2, x2, ...., xn is zero iff all the values are equal to the mean.
+Let's call mu the mean(mu = (x1+x2+...+xn)/n)
+Proof: we construct a chain of iffs. starting by saying that the sd is zero iff  (x1-mu)^2 + ...+(xn-mu)^2 = 0
+square of nonegatives are positive, so, all must be zeros, so xi = mu, so everyterm is zero iff xi=mu.
+
+Poof by contradiction:
+in order to prove p by contradiction, suppose p is false, deduce something known to be false. This is the same as contrapositive of (True->p) which is (~p->False)
+
+Proofs on sets:
+Power sets: the set of all the subsets of a set |P(A)| = 2^|A|
+Sequence is a like (a, b, c) and the order matters, but not in sets.
+
+Cross products:
+The product is one link between sets and sequences, so S1\times S2 ... \times Sn is a new set consisting of all the sequences.
+
+Ch3 Induction:
+Most powerful methods to establish truth:
+- Well Ordering Principle
+- Induction Rule
+- Strong Induction
+
+Let's start with "Well Ordering Principle":
+It states that "every nonempty set of nonnegative integers has a smallest element".
+Template for well-ordering proofs to prove "P(n) is true for n in N":
+- define set C as counterexampes to P being true ::= {n in N|P(n) is False}
+- use proof by contradictio and assume that C is nonempty.
+- by WOP there will be a smallest element n in C
+- reach contradiction somehow(often by showing how to use n to find another member in C that is smaller than n)
+- Conclude C must be empty that is no counterexamples exist.
+
+Example:
+Theorem: 1+ 2+ ... + n = n(n+1)/2 for all non-negative integers n
+- C::={n in N | 1+2+...+n != n(n+1)/2}
+- Assume C is nonempty set of non negative integers
+- By WOP C has a smallest element c.
+- since c is the smallest counter example, P(n) is false for n=c, and is true for n < c, but P(n) is true for n=0, so c > 0, this means that c-1 is a nonnegative integer, and since it is less than c, P(n) is true for n = c-1, but we assumed that c is the smallest
+
+Ordinary Induction:
+the Principle of induction:
+Let P(n) be a predicate.
+If P(0) is true and P(n) -> P(n+1) for all non-negative integers n
+Then
+P(m) is true for all non-negative integers m.
+
+Invariants:
+helpful in state machines, starting with a state as first config and then changing states through well defined series of steps.
+Example:Diagonally moving robot starting at (0,0).
+Can the robot reach (1,0)?
+
+Thm: Sum of robot's coordinate is always even.
+P(t) if at t robot is at (x,y), (x+y) mod 2 =0
+We can prove this by induction for the next state P(t+1)
+Corollary: The robot cannot reach (1,0)
+
+In short if you want to prove that a propery NICE holds for every step of the way:
+- Define P(t) to be the predicate that NICE holds immeediately after step t
+- Show that P(0) is true
+- Show that forall t in N, P(t) -> P(t+1)
+
+the 8 and 15 puzzles are very interesting application of proof using several things, invariant method, induction, using lemmas,definitions, corollary ...
+
+
+Strong Induction:
+It is useful when P(n+1) naturally depends on P(a) for values of a < n
+In ordinary induction we say:
+P(0), forall n in N. P(n) implies P(n+1)
+-----------------------------------------
+forall m in N. P(m)
+
+In strong induction we instead say:
+P(0), forall n in N.(P(0) AND P(1) AND ... P(m)) implies P(n+1)
+---------------------------------------------------------------
+forall m in N. P(m)
+
+Structural induction:
+
+
+
+
+	
+
+
+
+
+
+

@@ -1,0 +1,42 @@
+Decomposition, abstraction and functions
+====================================
+first of all just a vim trick:
+esc-v start the visual to select, esc-y copy, and esc-p paste
+if no return the value of the function is None
+
+There are two types of arguments in the functions:
+- positional(assumed the same order)
+- keyword argument(bound with the name as in the function definition)
+Keyword arguments are usually used in conjunction with default vlaues.
+For example:
+def printName(firstname, lastname, reverse=False):
+	if reverse:
+		print(lastname, " ", firstname)
+	else:	
+		print(firstname, " ", lastname)
+still the order of the parameters in the keyword argument setting matters, but if has default value and we don't want to set it we can.
+
+Decomposition and Abstraction:
+Decomposition is the same as breaking tasks into smaller self contained modules.
+Abstraction: hides details(more like a blackbox). So that is sensible and effectively put so that the builder and user of the abstraction both find it approapriate; this is the true art of programming.
+Abstraction is all about forgetting. Abstraction is a many-to=one process.
+The nice example is like the 25 lecture class, where 25 professors talk for each lecture, but are unrelated; no abstraction here; instead we could say that there are going to be 25 lectures with these specifications.
+
+global keyword for defining global variables:
+global numFibCalls
+numFibCalls = 0
+
+module in python is a .py file.
+
+we can import the module using:
+import M
+this way to access its elements we use M.whatever
+
+We can also instead say from M import *, where we don't need to use the dot notations, but also could be confusing, many frown upon this.
+
+The module is imported only once, if it happens that we change it and we want it to take effect, we can use reload()
+
+Files
+python accesses files in an OS independent way using "file handle".
+nameHandle = open('kids', 'w')
+which opens a file named kids for writing and returns a file handle for it.Always close files.

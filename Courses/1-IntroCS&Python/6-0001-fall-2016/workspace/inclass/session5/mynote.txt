@@ -1,0 +1,145 @@
+Structured types, mutability and higher order functions
+=======================================================
+So far we looked into int, float, and str
+- Scalar types(int and float): have no accessible internal strcutre
+- non-scalar types(str): has structure, i.e. can do indexing, get len, slice
+
+Non-scalar types we consider here, are 
+- tuple(a simple generalization of str)
+- list(mutable)
+- dict(mutable)
+
+We further see how we can treat functions like other types of objects.
+
+Tuples
+======
+tuples like strings are ordered sequence of elements, but the elements could be of any type and they can also be of different types. Check the playaround.py to see the importance of comma in tuples.
+
+
+multiple assignment using sequences(tuples and strings):
+In general if we know the length of the sequence we may use multiple assignment.
+x,y = (1,2)
+or x,y,z = "xyz"
+
+check the example in playaround.py
+
+tuples also could be conveniently used to swap values.
+so if you do 
+x=y and y=x, this will not swap
+if you do temp = x and x=y and y=x,this will
+but (x,y) = (y,x) is much easier.
+
+
+Lists and mutability
+===================
+Like tuples singletons but of list format , no comma needed
+Unlike tuples and strings that are immutable, lists are mutable.
+Objects of immutable types cannot be changed. But objects of type list can be modified after they are created.
+
+to check whether two objects are equal(not just the value) we can use "id".
+Check the python file to see the append and the aliasing.
+
+If we append the original structure is maintained, if we don't want to do that we can use concatenation or extend, see python file.
+Append keeps the structure so if I have list1 and append list2 to it, list now becomes a list element of lis1. 
+If I want to just combine list elements together I can do list1+list2, this is just a list, but does not change anything, but if I want to change it, for example if I want to add the elements of list2 to list1, I use extend.
+But also remember if we go element by element(for example we have a list, and we want to add elements to it) append would work, becase the elements are not lists; this is in line with the discussion above, since elements are of element type and not necessarily for example lists so [1,2,3,4].append(5) is [1,2,3,4,5] and not [1,2,3,4,[5]).
+
+These are some useful list functions:
+L.append(e) adds the object e to the end of L
+L.count(e) returns the number of times e occurs in L
+L.insert(i,e) insters the object e into L at index i
+L.extend(L1) adds the items in the list L1 to the end of L
+L.remove(e) removes the first occurence of e from L
+L.index(e) returns rhe index of the first occurence of e in L
+L.pop(i) removes and returns the item at index i in L, if there is no i, it defaults ro -1 which means it delets and returns the last element
+L.sort() sorts in ascending order
+L.reverse() reverses the order of the elements in L
+sorted(L) sorts but does not mutate L
+
+
+We can convert any string to lists, where the elements are each character by using list(s), or can, if we do ''.join(L) it turns a list of characters to a string.
+
+Cloning
+#######
+We should be careful with mutating a list when for example iterating over it.
+What we can do instead is to clone the list using the slicing [:] to get a copy of the list instead.See the python file. similarly we can use list(l) instead of l[:], and it would do the same thing and return a copy of the list.
+We can also use L.copy() which returns a shallow copy that is equivalent to L[:]
+L.clear() removes all items from the list, it is the same as using del L[:]
+
+We can use lists as stacks and queus:
+stacks(LIFO):
+list.append(e)
+list.pop()
+
+queues(FIFO):
+For that we use collections.deque
+from collections import deque
+q = deque(L)
+q.append(e)
+q.popleft()
+
+List comprehension
+=================
+L = [x**w for x in range(1,7)]
+also see another example in the python file.
+
+Functions as objects
+====================
+functions are objects like any other objects(int, list, str), they could be passed as arguments to a function, be an element of a list, placed on the right side of an assignment.
+Functions as arguments can be specifically interesting in conjunction with lists, this is known as the "higher order programming". For an example take a look at the python file. It is called higher order because the function itself has an argument that is a function.
+interesting thing, I used lambda in the example, which is an anonymous function.
+
+Python also has a built-in higher ordern function called map, which is very similar to the applyToEach that we defined in the example of the python file(but it is more general).Take a look at map in python file. If a function requires n argument, then the non-function arguments to the map should be n subseuquent ordered collections. Don't forget the list(map(....)), this is a change from python2 to python3.
+
+Strings, Tuples, and Lists
+==========================
+They are all sequential objects.Some of the similarities are as follows:
+seq[i]: you know what it does
+len(seq): you know what it does
+seq1+seq2: returns the concatenation
+n*seq: returns a sequence that repeats itself n times
+seq[start:end]: you know what it does
+e in seq : is True if e is contained in seq,or else returns False
+e not in seq: converse of the above
+for e in seq: iterates over the elements of the sequence
+
+Tuples could be useful when using them as keys to dictionaries we want to use aliasing.
+
+Some of the helpful traits of strings.
+s.count(s1): counts how many times string s1 has occured in s
+s.find(s1) returns the index of the first occurence of s1 and -1 if not found
+s.rfind(s1): same as find but starts at the end(reverse find)
+s.index(s1): same as find, but if not found raises an exception
+s.rindex(s1):you know
+s.lower() converts upper cases to lower cases
+s.replace(old, new): replaces all the occurences of old with new.
+s.rstrip():removes trailing white spaces from s
+s.split(d):splits s using d as delimiter. if d is not given, it splits based any arbitrary type of white spaces (space, tab, new line, return, formfeed).
+
+
+Dictionaries:
+=============
+like lists but indices dont need to be integers; they can be of any values of immutable type.Since they are not ordered we call them keys instead of indices. We enclose dicts in {}.
+monthNumbers = {"Jan":1, "Feb":2, "Mar":3, .....}
+we get keys by monthNumbers.keys()
+When we iterate over dicts, the value assigned to iteration variable is a key, see the python file.
+
+To delete a key k from a dictionary d do 
+del d[k]
+
+for k in d iterates over the key of d
+d.get(k,v) returns d[k] if k is in d and v otherwise for example if not found return v=-1
+
+Any immutable type objects can be used as the keys of the dictionary, like tuples, int , str
+We will see this later, but dicts are very efficient, they use hashing and lookps are independent of the size of the dict.
+
+
+We can also loop over dicts as follows:
+for k,v in d.items(), it is like enumerate
+
+To loop over multiple sequences(like lists) at the same time we can use zip
+fn = ["a", "b", "c"]
+ln = ["d", "e", "f"]
+for f, l in zip(fn, ln)
+
+

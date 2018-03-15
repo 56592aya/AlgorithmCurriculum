@@ -1,0 +1,7 @@
+In the discussion about floating points it is important to note that adding 0.1, for 10 times is not the same as 10*.1. This is basically because some rounding has happened in the for loop.
+This is worrisome, if we want to test for equality, so one thing to do is to check whether how close they are like abs(x-y) < 1e-10.
+
+Newton-Raphson: proves that if guess is an approximation to the root of a polynomial then guess - p(guess)/p'(guess) is always a better guess (p' is first derivative). This idea is used for "successive approximation".
+
+
+

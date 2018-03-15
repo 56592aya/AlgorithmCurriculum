@@ -1,0 +1,847 @@
+1
+00:00:00,000 --> 00:00:00,470
+
+2
+00:00:00,470 --> 00:00:03,060
+In this problem, we're going
+to look at how to infer a
+
+3
+00:00:03,060 --> 00:00:07,090
+continuous random variable from
+a discrete measurement.
+
+4
+00:00:07,090 --> 00:00:09,810
+And the continuous random
+variable that we're interested
+
+5
+00:00:09,810 --> 00:00:13,740
+in in this problem is q, which
+is given by this PDF.
+
+6
+00:00:13,740 --> 00:00:17,190
+It's 6q times 1 minus
+q for a q between
+
+7
+00:00:17,190 --> 00:00:18,750
+0 and 1 and 0 otherwise.
+
+8
+00:00:18,750 --> 00:00:21,190
+And here is a graph of
+what it looks like.
+
+9
+00:00:21,190 --> 00:00:23,510
+It just kind of has
+this curve shape.
+
+10
+00:00:23,510 --> 00:00:24,590
+And it's symmetric.
+
+11
+00:00:24,590 --> 00:00:28,920
+And it's peak is at 1/2.
+
+12
+00:00:28,920 --> 00:00:33,960
+And the way to interpret
+q is q is the
+
+13
+00:00:33,960 --> 00:00:35,840
+unknown bias of a coin.
+
+14
+00:00:35,840 --> 00:00:38,330
+So the bias of a coin, the
+probability of heads of that
+
+15
+00:00:38,330 --> 00:00:40,530
+coin is somewhere
+between 0 and 1.
+
+16
+00:00:40,530 --> 00:00:42,140
+We're not sure exactly
+what it is.
+
+17
+00:00:42,140 --> 00:00:48,160
+And here is our, say, prior
+belief about how this random
+
+18
+00:00:48,160 --> 00:00:51,290
+bias is distributed.
+
+19
+00:00:51,290 --> 00:00:55,350
+And we're going try to infer
+what this bias is by flipping
+
+20
+00:00:55,350 --> 00:00:59,310
+the coin and observing whether
+or not we got heads or tails.
+
+21
+00:00:59,310 --> 00:01:00,920
+And because of that, the
+measurement, or the
+
+22
+00:01:00,920 --> 00:01:03,580
+observation that we
+get, is discreet.
+
+23
+00:01:03,580 --> 00:01:05,129
+Either we get heads,
+or we get tails.
+
+24
+00:01:05,129 --> 00:01:07,670
+And we model that using a
+discrete random variable x,
+
+25
+00:01:07,670 --> 00:01:09,950
+which is, in this case, it
+turns out it's just a
+
+26
+00:01:09,950 --> 00:01:12,580
+Bernoulli random variable,
+either 0 or 1.
+
+27
+00:01:12,580 --> 00:01:16,070
+And the model that we have is
+that, if we knew what this
+
+28
+00:01:16,070 --> 00:01:20,050
+bias q was, if we knew that it
+was a little q, then this
+
+29
+00:01:20,050 --> 00:01:25,760
+coin, I mean, it behaves as if
+it was a coin with that bias.
+
+30
+00:01:25,760 --> 00:01:28,350
+So the probability of getting
+heads, or the probability that
+
+31
+00:01:28,350 --> 00:01:33,200
+x equals 1, is just equal
+to q, which is the bias.
+
+32
+00:01:33,200 --> 00:01:36,550
+And the probability that it's
+equal to 0 is 1 minus q.
+
+33
+00:01:36,550 --> 00:01:40,840
+So that's just our model
+of how the coin works.
+
+34
+00:01:40,840 --> 00:01:44,610
+We can also write this another
+way, as just more like a
+
+35
+00:01:44,610 --> 00:01:45,920
+conditional PMF.
+
+36
+00:01:45,920 --> 00:01:51,810
+So the conditional PMF of x,
+given q of little x, is q, if
+
+37
+00:01:51,810 --> 00:01:54,460
+x is 1, 1 minus q, if x equals
+0, and 0 otherwise.
+
+38
+00:01:54,460 --> 00:01:57,600
+Just a more compact way
+of writing this.
+
+39
+00:01:57,600 --> 00:02:01,640
+All right, so what we want to
+do in this problem is find
+
+40
+00:02:01,640 --> 00:02:04,370
+this conditional PDF.
+
+41
+00:02:04,370 --> 00:02:08,050
+What is the conditional
+PDF of q given x?
+
+42
+00:02:08,050 --> 00:02:11,310
+
+43
+00:02:11,310 --> 00:02:16,300
+So we observe what x is,
+either a 0 or 1.
+
+44
+00:02:16,300 --> 00:02:19,020
+And we want to know now, given
+that information, given that
+
+45
+00:02:19,020 --> 00:02:22,850
+measurement, what is the
+new distribution of q
+
+46
+00:02:22,850 --> 00:02:24,630
+the bias of the coin?
+
+47
+00:02:24,630 --> 00:02:28,280
+And to do that, well, we
+apply Bayes' rule.
+
+48
+00:02:28,280 --> 00:02:32,550
+And remember, Bayes' rule, it
+consists of several terms.
+
+49
+00:02:32,550 --> 00:02:37,580
+The first one is the numerator,
+which is our prior
+
+50
+00:02:37,580 --> 00:02:43,380
+initial belief, so which is
+just the regular PDF of q,
+
+51
+00:02:43,380 --> 00:02:53,566
+times the conditional
+PMF of x given q.
+
+52
+00:02:53,566 --> 00:03:00,220
+All right, so because we have a
+continuous variable that we
+
+53
+00:03:00,220 --> 00:03:03,190
+want to infer from a discreet
+measurement, we use this
+
+54
+00:03:03,190 --> 00:03:06,010
+variation of Bayes' rule, where
+we have a PDF here and a
+
+55
+00:03:06,010 --> 00:03:08,140
+conditional PMF here.
+
+56
+00:03:08,140 --> 00:03:10,450
+And the denominator is--
+
+57
+00:03:10,450 --> 00:03:16,520
+well, it's the PMF of x.
+
+58
+00:03:16,520 --> 00:03:19,060
+And of course, we can take
+this PMF of x, this
+
+59
+00:03:19,060 --> 00:03:22,420
+denominator, and expand it,
+using the law of total
+
+60
+00:03:22,420 --> 00:03:30,140
+probability where the PMF of x,
+you can think of it as you
+
+61
+00:03:30,140 --> 00:03:35,320
+can get x with a combination of
+lots of different possible
+
+62
+00:03:35,320 --> 00:03:37,380
+values of the bias q.
+
+63
+00:03:37,380 --> 00:03:44,650
+And so we just calculate
+all those
+
+64
+00:03:44,650 --> 00:03:47,695
+possibilities and integrate.
+
+65
+00:03:47,695 --> 00:03:50,530
+
+66
+00:03:50,530 --> 00:03:54,620
+And what we want to integrate
+here is q, so we want to
+
+67
+00:03:54,620 --> 00:03:58,570
+integrate-- remember to keep
+in mind the limits of
+
+68
+00:03:58,570 --> 00:03:59,240
+integration.
+
+69
+00:03:59,240 --> 00:04:06,180
+And this is just referenced
+by the limits of what
+
+70
+00:04:06,180 --> 00:04:09,220
+the PDF of q is.
+
+71
+00:04:09,220 --> 00:04:11,170
+OK.
+
+72
+00:04:11,170 --> 00:04:17,030
+All right, so now we're asked to
+find what this value is for
+
+73
+00:04:17,030 --> 00:04:21,209
+x equals to 0 or 1 and
+for all values of q.
+
+74
+00:04:21,209 --> 00:04:24,020
+And the values of q we care
+about are the ones
+
+75
+00:04:24,020 --> 00:04:26,030
+between 0 and 1.
+
+76
+00:04:26,030 --> 00:04:33,370
+So let's focus on the two
+different possibilities for x.
+
+77
+00:04:33,370 --> 00:04:38,190
+So the first one is, let's
+look at the case where x
+
+78
+00:04:38,190 --> 00:04:39,440
+equals 1 first.
+
+79
+00:04:39,440 --> 00:04:43,000
+
+80
+00:04:43,000 --> 00:04:45,040
+And then now let's just
+plug-in what all these
+
+81
+00:04:45,040 --> 00:04:46,180
+different terms should be.
+
+82
+00:04:46,180 --> 00:04:48,680
+Well, the PDF of
+q we're given.
+
+83
+00:04:48,680 --> 00:04:56,020
+And of course, we're looking
+here at q between 0 and 1, so
+
+84
+00:04:56,020 --> 00:04:57,490
+within that range.
+
+85
+00:04:57,490 --> 00:05:02,530
+The PDF of q is just
+6q times 1 minus q.
+
+86
+00:05:02,530 --> 00:05:07,320
+And the conditional PMF of x
+where we know that from our
+
+87
+00:05:07,320 --> 00:05:11,230
+model, because we're looking at
+the case where x equals 1.
+
+88
+00:05:11,230 --> 00:05:15,100
+That conditional
+PMF is just q.
+
+89
+00:05:15,100 --> 00:05:18,390
+And the denominator is really
+the same as the numerator,
+
+90
+00:05:18,390 --> 00:05:19,360
+except you integrate it.
+
+91
+00:05:19,360 --> 00:05:24,030
+So it's the integral from
+0 to 1 of 6q times 1
+
+92
+00:05:24,030 --> 00:05:29,018
+minus q times q dq.
+
+93
+00:05:29,018 --> 00:05:30,268
+OK.
+
+94
+00:05:30,268 --> 00:05:32,690
+
+95
+00:05:32,690 --> 00:05:37,260
+And now we can simplify this.
+
+96
+00:05:37,260 --> 00:05:39,280
+So under the numerator,
+we have integral--
+
+97
+00:05:39,280 --> 00:05:42,940
+sorry, 6q squared
+times 1 minus q.
+
+98
+00:05:42,940 --> 00:05:51,920
+And then the bottom we have
+the integral of 6q squared
+
+99
+00:05:51,920 --> 00:05:56,910
+minus q cubed, d cubed
+from 0 to 1.
+
+100
+00:05:56,910 --> 00:06:00,620
+And now this is just
+some calculus now.
+
+101
+00:06:00,620 --> 00:06:05,620
+So we still have the numerator
+6q squared times 1 minus q.
+
+102
+00:06:05,620 --> 00:06:17,070
+The denominator, we
+have 2q cubed--
+
+103
+00:06:17,070 --> 00:06:19,510
+that would give us the
+6q squared term--
+
+104
+00:06:19,510 --> 00:06:26,790
+minus 6/4 q to the fourth.
+
+105
+00:06:26,790 --> 00:06:28,270
+And we integrate that
+from 0 to 1.
+
+106
+00:06:28,270 --> 00:06:31,390
+
+107
+00:06:31,390 --> 00:06:33,190
+OK.
+
+108
+00:06:33,190 --> 00:06:34,240
+And what does that give us?
+
+109
+00:06:34,240 --> 00:06:38,180
+We get 6q squared 1 minus
+q still on the top.
+
+110
+00:06:38,180 --> 00:06:40,180
+And the bottom, we get--
+well the 0--
+
+111
+00:06:40,180 --> 00:06:41,863
+the case where it's
+0, it's just 0.
+
+112
+00:06:41,863 --> 00:06:47,020
+The case where it's 1, it's
+2 minus 3/2, so it's 1/2.
+
+113
+00:06:47,020 --> 00:06:59,690
+So really, it just becomes
+12 q squared 1 minus q.
+
+114
+00:06:59,690 --> 00:07:04,160
+And of course, this only true
+when q is between 0 and 1.
+
+115
+00:07:04,160 --> 00:07:07,930
+All right, so the case
+where it's equal to
+
+116
+00:07:07,930 --> 00:07:10,740
+1, we have our answer.
+
+117
+00:07:10,740 --> 00:07:15,533
+And it turns out that, if
+you plot this, what
+
+118
+00:07:15,533 --> 00:07:16,750
+does it look like?
+
+119
+00:07:16,750 --> 00:07:29,690
+It looks something like this
+where the peak is now at 2/3.
+
+120
+00:07:29,690 --> 00:07:32,700
+So how do you interpret this?
+
+121
+00:07:32,700 --> 00:07:35,910
+The interpretation is that what
+you have is you observe
+
+122
+00:07:35,910 --> 00:07:38,530
+that you've got, actually,
+heads on this toss.
+
+123
+00:07:38,530 --> 00:07:42,600
+So that is evidence that
+the bias of the coin
+
+124
+00:07:42,600 --> 00:07:43,960
+is relatively high.
+
+125
+00:07:43,960 --> 00:07:48,200
+So it's relatively more likely
+to get heads with this coin.
+
+126
+00:07:48,200 --> 00:07:52,550
+So q, in that case, you would
+believe that it's more likely
+
+127
+00:07:52,550 --> 00:07:54,540
+to be higher than 1/2.
+
+128
+00:07:54,540 --> 00:07:59,880
+And it turns out that, when you
+go through this reasoning
+
+129
+00:07:59,880 --> 00:08:02,640
+and the Bayes' rule, what
+you get is that
+
+130
+00:08:02,640 --> 00:08:03,840
+it looks like this.
+
+131
+00:08:03,840 --> 00:08:05,370
+And the peak is now at 2/3.
+
+132
+00:08:05,370 --> 00:08:08,330
+
+133
+00:08:08,330 --> 00:08:12,350
+And you can repeat this exercise
+now with the case
+
+134
+00:08:12,350 --> 00:08:22,610
+where x is 0.
+
+135
+00:08:22,610 --> 00:08:28,350
+So when x is 0, you still get
+the same term here, 6q 1 minus
+
+136
+00:08:28,350 --> 00:08:32,600
+q, but the conditional PMF
+is now the-- you want the
+
+137
+00:08:32,600 --> 00:08:37,000
+conditional PMF when x equals
+0, which is now 1 minus q.
+
+138
+00:08:37,000 --> 00:08:42,440
+So you get 1 minus q here.
+
+139
+00:08:42,440 --> 00:08:47,520
+And now this term becomes 6q
+times 1 minus q squared.
+
+140
+00:08:47,520 --> 00:08:57,280
+And so really, the bottom is
+also 6q times 1 minus q
+
+141
+00:08:57,280 --> 00:08:59,950
+squared dq.
+
+142
+00:08:59,950 --> 00:09:06,730
+And if you go through the same
+sort of calculus, what you get
+
+143
+00:09:06,730 --> 00:09:12,700
+is that, in this case,
+the answer is
+
+144
+00:09:12,700 --> 00:09:17,010
+12q 1 minus q squared.
+
+145
+00:09:17,010 --> 00:09:19,530
+So let me rewrite what
+the first case was.
+
+146
+00:09:19,530 --> 00:09:26,230
+The first case, when x equals
+1 was equal to 12q
+
+147
+00:09:26,230 --> 00:09:30,520
+squared 1 minus q.
+
+148
+00:09:30,520 --> 00:09:34,060
+So they look quite similar,
+except that this one has q
+
+149
+00:09:34,060 --> 00:09:36,350
+squared, this one has
+1 minus q squared.
+
+150
+00:09:36,350 --> 00:09:41,800
+And if you take this one, the
+case where you observe a 0,
+
+151
+00:09:41,800 --> 00:09:43,860
+and you plot that, it
+turns out it looks
+
+152
+00:09:43,860 --> 00:09:52,570
+something like this.
+
+153
+00:09:52,570 --> 00:09:55,880
+And this actually doesn't look
+like it, but it should be the
+
+154
+00:09:55,880 --> 00:09:58,580
+peak is at 1/3.
+
+155
+00:09:58,580 --> 00:10:01,620
+And so you notice, first of all,
+that these are symmetric.
+
+156
+00:10:01,620 --> 00:10:03,110
+There's some symmetry
+going on.
+
+157
+00:10:03,110 --> 00:10:07,640
+And this interpretation in this
+case is that, because you
+
+158
+00:10:07,640 --> 00:10:11,810
+observed 0, which corresponds to
+observing tails, that gives
+
+159
+00:10:11,810 --> 00:10:15,510
+you evidence that the bias of
+the coin is relatively low, or
+
+160
+00:10:15,510 --> 00:10:17,190
+the probability of getting
+heads with this coin is
+
+161
+00:10:17,190 --> 00:10:23,140
+relatively low, which pushes
+your belief about q towards
+
+162
+00:10:23,140 --> 00:10:25,730
+the smaller values.
+
+163
+00:10:25,730 --> 00:10:31,360
+OK, so it turns out that
+this distribution, this
+
+164
+00:10:31,360 --> 00:10:34,480
+distribution, and the original
+distribution of q, all fall
+
+165
+00:10:34,480 --> 00:10:36,860
+under family of distributions
+called the beta distribution.
+
+166
+00:10:36,860 --> 00:10:39,630
+And they're parameterized by
+a couple of parameters.
+
+167
+00:10:39,630 --> 00:10:44,970
+And it's used frequently to
+model things like the bias of
+
+168
+00:10:44,970 --> 00:10:49,090
+a coin, or anything that's a
+random variable that's bounded
+
+169
+00:10:49,090 --> 00:10:51,940
+between 0 and 1.
+
+170
+00:10:51,940 --> 00:10:56,540
+OK, so this problem allowed us
+to get some more exercise with
+
+171
+00:10:56,540 --> 00:11:00,170
+Bayes' rule, this continuous
+discrete
+
+172
+00:11:00,170 --> 00:11:01,430
+version of Bayes' rule.
+
+173
+00:11:01,430 --> 00:11:04,800
+And if you go through all the
+steps, you'll find that it's
+
+174
+00:11:04,800 --> 00:11:07,610
+relatively straightforward to
+go through the formula and
+
+175
+00:11:07,610 --> 00:11:11,140
+plug in the different parts of
+the terms and go through a
+
+176
+00:11:11,140 --> 00:11:13,340
+little bit of calculus
+and find the answer.
+
+177
+00:11:13,340 --> 00:11:16,080
+And it's always good to go
+back, once you find the
+
+178
+00:11:16,080 --> 00:11:20,910
+answer, to look at it a little
+bit and make sure that
+
+179
+00:11:20,910 --> 00:11:21,770
+actually makes sense.
+
+180
+00:11:21,770 --> 00:11:24,660
+So you can convince yourself
+that it's not
+
+181
+00:11:24,660 --> 00:11:25,910
+something that looks--
+
+182
+00:11:25,910 --> 00:11:26,890
